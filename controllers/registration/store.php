@@ -10,7 +10,7 @@ $password = $_POST['password'];
 
 $errors = [];
 if (!Validator::email($email)) {
-   $errors['email'] = 'Please provide a valid email address.';
+    $errors['email'] = 'Please provide a valid email address.';
 }
 
 if (!Validator::string($password, 7, 30)) {
@@ -36,9 +36,7 @@ if($user) {
         'password' => password_hash($password, PASSWORD_DEFAULT)
     ]);
 
-    $_SESSION['user'] = [
-        'email' => $email
-    ];
+    login($user);
 
     header('location: /');
     exit();

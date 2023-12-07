@@ -15,4 +15,8 @@ $router->get('/note/edit', 'controllers/notes/edit.php');
 $router->post('/notes', 'controllers/notes/store.php');
 
 $router->get('/register', 'controllers/registration/create.php')->only('quest');
-$router->post('/register', 'controllers/registration/store.php');
+$router->post('/register', 'controllers/registration/store.php')->only('quest');
+
+$router->get('/login', 'controllers/session/create.php')->only('quest');
+$router->post('/session', 'controllers/session/store.php')->only('quest');
+$router->delete('/session', 'controllers/session/destroy.php')->only('auth');
