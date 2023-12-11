@@ -2,6 +2,7 @@
 use Core\Database;
 use Core\Validator;
 use Core\App;
+use Core\Authenticator;
 
 $db = App::resolve(Database::class);
 
@@ -36,7 +37,7 @@ if($user) {
         'password' => password_hash($password, PASSWORD_DEFAULT)
     ]);
 
-    login($user);
+    (new Authenticator)->login(['email' => $email]);
 
     header('location: /');
     exit();
