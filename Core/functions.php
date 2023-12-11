@@ -1,6 +1,7 @@
 <?php
 
 use Core\Response;
+use Core\Session;
 
 function dd($value) {
     var_dump($value);
@@ -43,4 +44,9 @@ function authorize($condition, $status = Response::FORBIDDEN)
 function redirect($path) {
     header("location: {$path}");
     exit();
+}
+
+function old($key, $default = '')
+{
+    return Core\Session::get('old')[$key] ?? $default;
 }
