@@ -54,6 +54,11 @@ class Router {
         return $this;
     }
 
+    public function previousUrl()
+    {
+        return $_SERVER['HTTP_REFERER'];
+    }
+
     protected function abort($code = 404) {
         http_response_code($code);
 
