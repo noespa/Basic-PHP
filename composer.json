@@ -1,0 +1,14 @@
+{
+    "name": "monter/php",
+    "authors": [{
+        "name": "Bartosz Kaszowski",
+        "email": "bartosz@kaszowski.eu"
+    }],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Core\\": "Core/",
+            "Http\\": "Http/"
+        }
+    }
+}
