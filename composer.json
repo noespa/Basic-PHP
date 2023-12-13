@@ -2,13 +2,23 @@
     "name": "monter/php",
     "authors": [{
         "name": "Bartosz Kaszowski",
-        "email": "bartosz@kaszowski.eu"
+        "email": "noespa@gmail.com"
     }],
-    "require": {},
+    "require": {
+        "illuminate/collections": "^10.37"
+    },
     "autoload": {
         "psr-4": {
             "Core\\": "Core/",
             "Http\\": "Http/"
+        }
+    },
+    "require-dev": {
+        "pestphp/pest": "^2.28"
+    },
+    "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
         }
     }
 }
