@@ -2,7 +2,7 @@
     "name": "monter/php",
     "authors": [{
         "name": "Bartosz Kaszowski",
-        "email": "noespa@gmail.com"
+        "email": "bartosz@kaszowski.eu"
     }],
     "require": {
         "illuminate/collections": "^10.37"
